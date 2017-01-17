@@ -15,7 +15,7 @@ namespace WebApi.Controllers
         public ResultObject getVehTotal() {
             List<VehTotal> totallist = new List<VehTotal>();
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            string queryString = "select at_province,total from (select t.at_province,sum(t.at_total) as total from AREA_VEHICLE_TOTAL t where t.at_year = 2016 and t.at_province is not null  group by t.at_province order by total ) where rownum<=10";
+            string queryString = "select at_province,total from (select t.at_province,sum(t.at_total) as total from AREA_VEHICLE_TOTAL t where t.at_year = 2016 and t.at_province is not null  group by t.at_province order by total DESC) where rownum<=10";
             OracleConnection con = new OracleConnection(connectionString);
             OracleCommand command = con.CreateCommand();
             command.CommandText = queryString;
