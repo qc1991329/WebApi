@@ -95,7 +95,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="TopSdk">
-      <HintPath>..\..\..\sdk-net-2016-06-07\TopSdk.dll</HintPath>
+      <HintPath>..\..\..\阿里大鱼\TopSdk.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
